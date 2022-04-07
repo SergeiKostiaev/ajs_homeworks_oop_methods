@@ -1,69 +1,87 @@
-import Character from '../classCharacter';
-import Bowman from '../classBowman';
-import Swordsman from '../classSwordsman';
-import Magician from '../classMagician';
-import Undead from '../classUndead';
-import Zombie from '../classZombie';
-import Daemon from '../classDaemon';
+import Character from './Character.test';
+import Bowman from './Bowman.test';
+import Swordsman from './Swordsman.test';
+import Magician from './Magician.test';
+import Undead from './Undead.test';
+import Zombie from './Zombie.test';
+import Daemon from './Daemon.test';
 
 test('Bowman', () => {
-  const bowman = new Bowman('Василий');
-  expect(bowman.name).toBe('Василий');
-  expect(bowman.type).toBe('Bowman');
-  expect(bowman.health).toBe(100);
-  expect(bowman.level).toBe(1);
-  expect(bowman.attack).toBe(25);
-  expect(bowman.defence).toBe(25);
+  const received = new Bowman('Bob', 'Bowman');
+  const expected = {
+      name: 'Bob',
+      type: 'Bowman',
+      health: 100,
+      level: 1,
+      attack: 25,
+      defence: 25,
+  };
+  expect(received).toEqual(expected);
 });
 
 test('Swordsman', () => {
-  const swordsman = new Swordsman('Афанасий');
-  expect(swordsman.name).toBe('Афанасий');
-  expect(swordsman.type).toBe('Swordsman');
-  expect(swordsman.health).toBe(100);
-  expect(swordsman.level).toBe(1);
-  expect(swordsman.attack).toBe(40);
-  expect(swordsman.defence).toBe(10);
+  const received = new Swordsman('Swo', 'Swordsman');
+  const expected = {
+      name: 'Swo',
+      type: 'Swordsman',
+      health: 100,
+      level: 1,
+      attack: 40,
+      defence: 10,
+  };
+  expect(received).toEqual(expected);
 });
 
 test('Magician', () => {
-  const magician = new Magician('Авдотий');
-  expect(magician.name).toBe('Авдотий');
-  expect(magician.type).toBe('Magician');
-  expect(magician.health).toBe(100);
-  expect(magician.level).toBe(1);
-  expect(magician.attack).toBe(10);
-  expect(magician.defence).toBe(40);
+  const received = new Magician('Mag', 'Magician');
+  const expected = {
+      name: 'Mag',
+      type: 'Magician',
+      health: 100,
+      level: 1,
+      attack: 10,
+      defence: 40,
+  };
+  expect(received).toEqual(expected);
 });
 
 test('Undead', () => {
-  const undead = new Undead('Эрнест');
-  expect(undead.name).toBe('Эрнест');
-  expect(undead.type).toBe('Undead');
-  expect(undead.health).toBe(100);
-  expect(undead.level).toBe(1);
-  expect(undead.attack).toBe(25);
-  expect(undead.defence).toBe(25);
+  const received = new Undead('Un', 'Undead');
+  const expected = {
+      name: 'Un',
+      type: 'Undead',
+      health: 100,
+      level: 1,
+      attack: 25,
+      defence: 25,
+  };
+  expect(received).toEqual(expected);
 });
 
 test('Zombie', () => {
-  const zombie = new Zombie('Клавдия');
-  expect(zombie.name).toBe('Клавдия');
-  expect(zombie.type).toBe('Zombie');
-  expect(zombie.health).toBe(100);
-  expect(zombie.level).toBe(1);
-  expect(zombie.attack).toBe(40);
-  expect(zombie.defence).toBe(10);
+  const received = new Zombie('Zo', 'Zombie');
+  const expected = {
+      name: 'Zo',
+      type: 'Zombie',
+      health: 100,
+      level: 1,
+      attack: 40,
+      defence: 10,
+  };
+  expect(received).toEqual(expected);
 });
 
 test('Daemon', () => {
-  const daemon = new Daemon('Ефросинья');
-  expect(daemon.name).toBe('Ефросинья');
-  expect(daemon.type).toBe('Daemon');
-  expect(daemon.health).toBe(100);
-  expect(daemon.level).toBe(1);
-  expect(daemon.attack).toBe(10);
-  expect(daemon.defence).toBe(40);
+  const received = new Daemon('Da', 'Daemon');
+  const expected = {
+      name: 'Da',
+      type: 'Daemon',
+      health: 100,
+      level: 1,
+      attack: 10,
+      defence: 40,
+  };
+  expect(received).toEqual(expected);
 });
 
 test('fail name', () => {

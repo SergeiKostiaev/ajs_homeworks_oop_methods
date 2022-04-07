@@ -33,4 +33,4 @@ export default class Character {
         this.health -= points * (1 - this.defence / 100);
       }
     }
-}
+  }

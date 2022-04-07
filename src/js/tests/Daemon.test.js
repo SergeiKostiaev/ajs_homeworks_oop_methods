@@ -1,4 +1,4 @@
-import Character from './classCharacter';
+import Character from './Character.test';
 
 export default class Daemon extends Character {
   constructor(name) {
