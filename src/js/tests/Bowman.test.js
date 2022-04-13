@@ -1,7 +1,18 @@
-import Character from './Character.test';
+import Bowman from '../Bowman';
 
-export default class Bowman extends Character {
-  constructor(name) {
-    super(name, 'Bowman', 25, 25);
+test('should check the class Bowman', () => {
+  class TestBowman {
+    constructor(name) {
+      this.name = name;
+      this.health = 100;
+      this.level = 1;
+      this.type = 'Bowman';
+      this.attack = 25;
+      this.defence = 25;
+    }
   }
-}
+
+  const received = new TestBowman('Bowman');
+  const expected = new Bowman('Bowman');
+  expect(received).toEqual(expected);
+});

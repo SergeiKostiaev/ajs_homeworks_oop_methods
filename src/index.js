@@ -1,5 +1,11 @@
 import './css/style.css';
 
-import './js/classes';
+import './js/character';
+import './js/Bowman';
+import './js/Swordsman';
+import './js/Magician';
+import './js/Undead';
+import './js/Zombie';
+import './js/Daemon';
 
 // TODO: write your code in app.js

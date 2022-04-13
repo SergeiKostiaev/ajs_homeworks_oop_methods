@@ -1,7 +1,18 @@
-import Character from './Character.test';
+import Daemon from '../Daemon';
 
-export default class Daemon extends Character {
-  constructor(name) {
-    super(name, 'Daemon', 10, 40);
+test('should check the class Daemon', () => {
+  class TestDaemon {
+    constructor(name) {
+      this.name = name;
+      this.health = 100;
+      this.level = 1;
+      this.type = 'Daemon';
+      this.attack = 10;
+      this.defence = 40;
+    }
   }
-}
+
+  const received = new TestDaemon('Daemon');
+  const expected = new Daemon('Daemon');
+  expect(received).toEqual(expected);
+});
