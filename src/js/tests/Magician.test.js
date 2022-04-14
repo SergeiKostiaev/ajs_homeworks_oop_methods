@@ -1,18 +1,14 @@
-import Magician from '../magician';
+import Magician from '../Magician';
 
-test('should check the class Magician', () => {
-  class TestMagician {
-    constructor(name) {
-      this.name = name;
-      this.health = 100;
-      this.level = 1;
-      this.type = 'Magician';
-      this.attack = 10;
-      this.defence = 40;
-    }
-  }
-
-  const received = new TestMagician('Magician');
-  const expected = new Magician('Magician');
+test('Создание нового персонажа Magician', () => {
+  const received = new Magician('Mag', 'Magician');
+  const expected = {
+      name: 'Mag',
+      type: 'Magician',
+      health: 100,
+      level: 1,
+      attack: 10,
+      defence: 40,
+  };
   expect(received).toEqual(expected);
 });

@@ -1,18 +1,14 @@
 import Undead from '../Undead';
 
-test('should check the class Undead', () => {
-  class TestUndead {
-    constructor(name) {
-      this.name = name;
-      this.health = 100;
-      this.level = 1;
-      this.type = 'Undead';
-      this.attack = 25;
-      this.defence = 25;
-    }
-  }
-
-  const received = new TestUndead('Undead');
-  const expected = new Undead('Undead');
+test('Создание нового персонажа Undead', () => {
+  const received = new Undead('Und', 'Undead');
+  const expected = {
+      name: 'Und',
+      type: 'Undead',
+      health: 100,
+      level: 1,
+      attack: 25,
+      defence: 25,
+  };
   expect(received).toEqual(expected);
 });

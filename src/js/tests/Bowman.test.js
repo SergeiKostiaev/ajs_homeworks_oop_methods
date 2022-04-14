@@ -1,18 +1,14 @@
 import Bowman from '../Bowman';
 
-test('should check the class Bowman', () => {
-  class TestBowman {
-    constructor(name) {
-      this.name = name;
-      this.health = 100;
-      this.level = 1;
-      this.type = 'Bowman';
-      this.attack = 25;
-      this.defence = 25;
-    }
-  }
-
-  const received = new TestBowman('Bowman');
-  const expected = new Bowman('Bowman');
+test('Создание нового персонажа Bowman', () => {
+  const received = new Bowman('Bob', 'Bowman');
+  const expected = {
+      name: 'Bob',
+      type: 'Bowman',
+      health: 100,
+      level: 1,
+      attack: 25,
+      defence: 25,
+  };
   expect(received).toEqual(expected);
 });
